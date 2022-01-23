@@ -1,4 +1,5 @@
 # twin
-AI based compenion robot 
-Does mood detection
-Gives reminder
+AI based compenion robot </br>
+Does mood detection </br>
+Gives reminder </br>
+
