@@ -1,9 +1,14 @@
 # twin
-AI based compenion robot </br>
-Does mood detection </br>
-Gives reminder </br>
-Sends notification </br>
-The robot is cute
+- About twin
+```
+    AI based compenion robot
+    Does mood detection
+    Gives reminder (By voice and app notification)
+    Sends notification & security alert
+    Help to monitor room remotely (sends realtime video) 
+```
 
 ## APP for the robot
-&nbsp; &nbsp; ![...](/images/ForREADME/app1md.png) &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  ![...](/images/ForREADME/app2md.png) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ![...](/images/ForREADME/app3md.png)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ![...](/images/ForREADME/app4md.png)
+![...](/images/ForREADME/app1md.png) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  ![...](/images/ForREADME/app2md.png) 
+
+![...](/images/ForREADME/app3md.png)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  ![...](/images/ForREADME/app4md.png)
