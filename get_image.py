@@ -1,4 +1,4 @@
-
+import cv2
 class getImageFromApp:
     def __init__(self):
         print("getImageFromApp object initialized")
@@ -9,4 +9,6 @@ class getImageFromApp:
        
     def getImage():
     	#fetch image from app and return it
+        capturedImg = cv2.imread("capturedImg.png")
+        return capturedImg
     

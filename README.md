@@ -14,3 +14,5 @@
 ![...](/images/ForREADME/app3md.png)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  ![...](/images/ForREADME/app4md.png)
 
 - install flask in ubuntu [https://linuxize.com/post/how-to-install-flask-on-ubuntu-20-04/]
+- install opencv in ubuntu[sudo apt-get install python3-opencv]
+- install face_recognition library [https://smartbuilds.io/installing-face-recognition-library-on-raspberry-pi-4/]
