@@ -12,3 +12,5 @@
 ![...](/images/ForREADME/app1md.png) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  ![...](/images/ForREADME/app2md.png) 
 
 ![...](/images/ForREADME/app3md.png)  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  ![...](/images/ForREADME/app4md.png)
+
+- install flask in ubuntu [https://linuxize.com/post/how-to-install-flask-on-ubuntu-20-04/]

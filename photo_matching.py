@@ -9,4 +9,10 @@ class Photo_Matching:
         print("     Owner (match taken photo with the database)")
         print("     Family member (match taken photo with the database)")
         print("end of info *****************")
+    def match():
+    	#return true/false after matching 2 image
+    	
+    def replaceStrengerImage():
+    	#replace prev strenger with cur
+    
 

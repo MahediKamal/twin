@@ -7,3 +7,9 @@ class Notification:
         print("     Send notification")
         print("     Send video")
         print("end of info *****************")
+    def writeNofification():
+    
+    
+    def saveStrengerPhoto():
+    
+

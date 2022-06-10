@@ -9,4 +9,7 @@ class Mood_Detection:
         print("     Preprocess (do some preprocess before using the network)")
         print("     Use google server (give processed image and receive data)")
         print("end of info *****************")
+   
+    def detect():
+    	#detect mood from a photo and return it
 
