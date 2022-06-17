@@ -17,10 +17,10 @@ class Mood_Detection:
         print("     Use google server (give processed image and receive data)")
         print("end of info *****************")
    
-    def detect(frame):
+    def detect(self,frame):
     	#detect mood from a photo and return it
-        face_classifier = cv2.CascadeClassifier('C:/Users/User/PycharmProjects/twin/haarcascade_frontalface_default2.xml')
-        classifier = load_model('C:/Users/User/PycharmProjects/twin/model.h5')
+        face_classifier = cv2.CascadeClassifier('D:/twin/MoodDetectionModel/haarcascade_frontalface_default2.xml')
+        classifier = load_model('D:/twin/MoodDetectionModel/model.h5')
 
         emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
 
@@ -46,10 +46,13 @@ class Mood_Detection:
                 cv2.putText(frame, label, label_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             else:
                 cv2.putText(frame, 'No Faces', (30, 80), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-        cv2.imshow('Emotion Detector', frame)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+            cv2.imshow('Emotion Detector', frame)
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
 
-        cap.release()
+        # cap.release()
         cv2.destroyAllWindows()
         return label
+
+
+#Mood_Detection().detect()

@@ -11,7 +11,7 @@ class Photo_Matching:
         print("     Owner (match taken photo with the database)")
         print("     Family member (match taken photo with the database)")
         print("end of info *****************")
-    def match(img1, img2):
+    def match(self, img1, img2):
     	#return true/false after matching 2 image
         rgb_img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
         img_encoding1 = face_recognition.face_encodings(rgb_img1)[0]
@@ -22,9 +22,7 @@ class Photo_Matching:
         result = face_recognition.compare_faces([img_encoding1], img_encoding2)
         return result
     	
-    def replaceStrengerImage():
+    def replaceStrengerImage(self):
     	#replace prev strenger with cur
         curStrenger = cv2.imread("images/curStrenger.png")
-		prvStrenger = cv2.imread("images/prvStrenger.png")
-        prvStrenger = curStrenger    
-
+        cv2.imwrite("images/prvStrenger.png", curStrenger)
