@@ -12,7 +12,7 @@ class Notification:
         file1 = open("text/notificationFile.txt","w")
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
-        file1.write("Stranger detected at :" + current_time)
+        file1.write("Stranger detected at :" + current_time + "Avash,you must check it now.")
         file1.close()
     def writeMood(self, mood):
         file1 = open("text/moodFile.txt", "w")

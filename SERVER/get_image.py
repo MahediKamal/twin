@@ -1,5 +1,6 @@
 import cv2
-import AppImage
+# import AppImage
+import SS
 class getImageFromApp:
     def __init__(self):
         print("getImageFromApp object initialized")
@@ -10,9 +11,9 @@ class getImageFromApp:
        
     def getImage(self):
     	#fetch image from app and return it
-
-        d = AppImage.Dummy()
-        capturedImg = d.get_image()
-        # capturedImg = cv2.imread("images/owner.png")
+        ss = SS.SS()
+        ss.takeSS()
+        # capturedImg = cv2.imread("monitor-1.png")
+        capturedImg = cv2.imread("images/capturedImg.png")
         cv2.imwrite("images/capturedImg.png", capturedImg)
         return capturedImg
