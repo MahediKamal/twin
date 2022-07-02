@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="8" >
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div>
+       <img src="https://192.168.0.109:8080/shot.jpg" style="width:650px; height: 650px;" alt="">
+
+       <!-- <img src="http://192.168.68.197:5050/get_image" alt="getting"> -->
+	
+	   
+       <!-- <button>Download</button> -->
+    </div>
+
+    <!-- <script src="scriptxxx.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
+    <script>
+        var img = document.querySelector('img')
+
+        function loaded() {
+        // alert('loaded')
+            console.log("loaded");
+            let x = document.createElement("img");
+            x.src = "http://192.168.0.110:5050/get_image";
+            x.alt="";
+            document.querySelector('div').appendChild(x);
+            console.log(x);
+        }
+
+        if (img.complete) {
+        loaded()
+        } else {
+        img.addEventListener('load', loaded)
+        img.addEventListener('error', function() {
+            alert('error')
+        })
+        }
+    </script>
+</body>
+</html>
