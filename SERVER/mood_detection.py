@@ -20,8 +20,8 @@ class Mood_Detection:
    
     def detect(self,frame):
     	#detect mood from a photo and return it
-        face_classifier = cv2.CascadeClassifier('D:/twin/MoodDetectionModel/haarcascade_frontalface_default2.xml')
-        classifier = load_model('D:/twin/MoodDetectionModel/model.h5')
+        face_classifier = cv2.CascadeClassifier('D:/updated Twin/MoodDetectionModel/haarcascade_frontalface_default2.xml')
+        classifier = load_model('D:/updated Twin/MoodDetectionModel/model.h5')
 
         emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
 

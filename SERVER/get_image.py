@@ -13,7 +13,7 @@ class getImageFromApp:
     	#fetch image from app and return it
         ss = SS.SS()
         ss.takeSS()
-        # capturedImg = cv2.imread("monitor-1.png")
-        capturedImg = cv2.imread("images/capturedImg.png")
+        capturedImg = cv2.imread("monitor-1.png")
+        # capturedImg = cv2.imread("images/capturedImg.png")
         cv2.imwrite("images/capturedImg.png", capturedImg)
         return capturedImg

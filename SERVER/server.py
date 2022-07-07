@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/img')
 def downlod_img():
-    p = "text/moodFile.txt"
+    p = "images/capturedImg.png"
     return send_file(p, as_attachment=True)
 
 
@@ -48,7 +48,7 @@ def send_notification():  # send mood file to client
 def get_image_from_app():
     print("do work on server")
 
-    time.sleep(5)
+    # time.sleep(2)
     # run main.py
     runner = main.Main()
     runner.run()

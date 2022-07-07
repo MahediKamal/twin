@@ -1,17 +1,22 @@
 #source venv/bin/activate
 # pip install virtualenv
 # virtualenv env
+# pip install tensorflow
 # pip install keras
 # pip install opencv-python
 # pip install face-recognition
+import sys
 
-
-import time
 import cv2
+# import keyboard
+# import speech_recognition as sr
+# import pyttsx3
+
 import get_image
 import photo_matching
 import notification
 import mood_detection
+# import alexa
 import os.path
 # import face
 # import voice
@@ -19,24 +24,49 @@ class Main:
 	def __init__(self):
 		print("start main")
 
+	# def alexa(self):
+	# 	listener = sr.Recognizer()
+	# 	engine = pyttsx3.init()
+	# 	voices = engine.getProperty('voices')
+	# 	engine.setProperty('voice', voices[1].id)
+	# 	while True:
+	# 		print("Looping ")
+	# 		if keyboard.is_pressed("q"):  # if key 's' is pressed
+	# 			exit()
+	# 			sys.exit()
+	# 		try:
+	# 			alx = alexa.Alexa()
+	# 			alx.run_twin()
+	# 		except:
+	# 			pass
+
 	def run(self):
+		# t1 = threading.Thread(target=alexa )
+		# t1.start()
 		moodTimer = 0
 		arreyOfMoods = []
 		sendNotification = False
+		print("Below thread")
 
 		while True:
 			try:
 				camera = get_image.getImageFromApp()
 				image = camera.getImage()
-				cv2.imshow('img', image)
-				cv2.waitKey(10)
+				# cv2.imshow('img', image)
+				# cv2.waitKey(10)
 
 				# detect strenger
 				matcher = photo_matching.Photo_Matching()
-				owner = cv2.imread("images/prvStrenger2.png")
+				owner = cv2.imread("images/owner.png")
 
+				print("photo will be matched in next line")
 				isOwner = matcher.match(image, owner)
-				print(isOwner)
+				print("photo matched")
+				if isOwner == True:
+					print("Owner detected")
+				else:
+					print("stranger detected")
+
 				# # print(type(isOwner))
 				if isOwner[0] == False: #is a strenger
 					print("is stranger")
@@ -59,14 +89,16 @@ class Main:
 						name = "images/prvStrenger" + str(i+1) + ".png"
 						filname = os.path.normpath(name)
 						strng = cv2.imread(filname)
-						cv2.imshow('img', strng)
-						cv2.waitKey(10)
+						# cv2.imshow('img', strng)
+						# cv2.waitKey(10)
 						dc = matcher.match(curStrenger, strng)
 						if dc[0] == True:
 							sameStrenger = True
 
-
-					print(sameStrenger)
+					if sameStrenger == True:
+						print("same Stranger")
+					else:
+						print("new stranger")
 
 					file2 = open("text/notiFlg.txt", "w")
 					if sameStrenger == False:
@@ -106,7 +138,7 @@ class Main:
 				file1.write("False")
 				file1.close()
 				break
-			return None
+			#return None
 
 # start.run()
 # x = Main()
