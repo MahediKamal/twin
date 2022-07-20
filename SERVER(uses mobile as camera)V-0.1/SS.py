@@ -24,7 +24,7 @@ class SS:
         #     print("image taken")
 
         print("image taken using opencv")
-        url = 'https://192.168.43.85:8080/shot.jpg'
+        url = 'https://172.20.10.2:8080/shot.jpg' // url of the image to be downloaded
 
         # while True:
         ssl._create_default_https_context = ssl._create_unverified_context
